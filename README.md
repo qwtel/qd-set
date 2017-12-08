@@ -39,6 +39,20 @@ it.next().value  // => 3
 it.next().done   // => true
 ```
 
+## CDN
+
+```html
+<script src="https://unpkg.com/qd-set"></script>
+<!-- or -->
+<script src="https://unpkg.com/qd-set/dist/with-iter.min.js"></script>
+
+<script>
+  var Set = qdSet.Set;
+  var s = new Set([1, 2, 2, 3])
+  // ...
+</script>
+```
+
 ## Source
 
 ```js

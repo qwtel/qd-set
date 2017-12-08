@@ -78,6 +78,12 @@ const config = [
       filename: `index${min}.js`,
     },
   }),
+  merge(baseConfig, {
+    entry: resolve('./with-iter.js'),
+    output: {
+      filename: `with-iter${min}.js`,
+    },
+  }),
 ];
 
 module.exports = config;
