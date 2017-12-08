@@ -1,5 +1,5 @@
 # Quick and Dirty Set
-A tiny, quick and dirty ES6 `Set` implementation.
+A tiny (10 LOC) ES6 `Set` implementation.
 
 Want to use ES6 `Set` for some basic stuff?
 Don't want to to pull in the entire polyfill?
