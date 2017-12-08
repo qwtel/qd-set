@@ -3,9 +3,40 @@
   "version": "1.0.0-pre",
   "description": "A tiny, quick and dirty Set implementation.",
   "main": "index.js",
+  "browser": "dist/index.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "npm run build:prod & npm run build:dev & wait",
+    "build:prod": "webpack --env prod",
+    "build:dev": "webpack",
+    "prepare": "npm run lint && npm run test && npm run build",
+    "version": "npm run prepare && git add ."
   },
   "author": "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "babel-loader": "^7.1.2",
+    "camelcase": "^4.1.0",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1",
+    "yargs": "^10.0.3"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qwtel/qd-set.git"
+  },
+  "keywords": [
+    "set",
+    "es6",
+    "tiny",
+    "quick",
+    "dirty"
+  ],
+  "bugs": {
+    "url": "https://github.com/qwtel/qd-set/issues"
+  },
+  "homepage": "https://github.com/qwtel/qd-set#readme"
 }

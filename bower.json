@@ -1,0 +1,24 @@
+{
+  "name": "qd-set",
+  "description": "A tiny, quick and dirty Set implementation.",
+  "main": "dist/index.js",
+  "authors": [
+    "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/qwtel/qd-set",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "set",
+    "es6",
+    "tiny",
+    "quick",
+    "dirty"
+  ]
+}

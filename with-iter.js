@@ -1,4 +1,4 @@
-// A tiny, quick and dirty `Set` implementation with iteration. 
+// A tiny, quick and dirty `Set` implementation with iteration.
 export const Set = global.Set && new global.Set([1]).size === 1 ? global.Set : (() => {
   const iter = a => {
     let i = 0; const ac = a.map(x => ({ value: x, done: false }));
