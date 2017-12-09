@@ -2,9 +2,10 @@
 
 [![Build Status](https://travis-ci.org/qwtel/qd-set.svg?branch=master)](https://travis-ci.org/qwtel/qd-set)
 
-A tiny (10 LOC) ES6 `Set` implementation. Think of it as a forwards-compatible [`_.uniq(array)`](http://underscorejs.org/#uniq).
+A tiny (10 LOC) [ES6 `Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) implementation.
+Think of it as a forwards-compatible [`_.uniq(array)`](http://underscorejs.org/#uniq).
 
-**Disclaimer**: Not a full polyfill, not spec-compliant, don't use on large data.
+**Disclaimer**: Not a complete polyfill, don't use on large data.
 
 ## Usage
 ```js
