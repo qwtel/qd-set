@@ -70,72 +70,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-// A tiny, quick and dirty `Set` implementation with iteration.
-var Set = exports.Set = global.Set && new global.Set([1]).size === 1 ? global.Set : function () {
-  var iter = function iter(a) {
-    var i = 0;var ac = a.map(function (x) {
-      return { value: x, done: false };
-    });
-    var it = { next: function next() {
-        return i < ac.length ? ac[i++] : { done: true };
-      } };
-    if (global.Symbol) it[global.Symbol.iterator] = function () {
-      return it;
-    };
-    return it;
-  };
-  return function Set() {
-    var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-
-    a = a.filter(function (x, i) {
-      return i === a.indexOf(x);
-    });
-    a.size = a.length;
-    a.has = function (x) {
-      return a.indexOf(x) > -1;
-    };
-    a.add = function (x) {
-      if (!a.has(x)) {
-        a.size++;a.push(x);
-      }return a;
-    };
-    a.delete = function (x) {
-      var t = void 0;if (t = a.has(x)) {
-        a.size--;a.splice(a.indexOf(x), 1);
-      }return t;
-    };
-    a.clear = function () {
-      while (a.pop()) {}a.size = 0;
-    };
-    a.keys = a.values = function () {
-      return iter(a);
-    };
-    a.entries = function () {
-      return iter(a.map(function (x) {
-        return [x, x];
-      }));
-    };
-    if (global.Symbol) a[global.Symbol.iterator] = a.values;
-    return a;
-  };
-}();
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -163,6 +102,81 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Set = exports.Set = global.Set && new global.Set([1]).size === 1 ? global.Set : __webpack_require__(2);
+
+exports.default = Set;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Set = Set;
+var iter = function iter(a) {
+  var i = 0;var ac = a.map(function (x) {
+    return { value: x, done: false };
+  });
+  var it = { next: function next() {
+      return i < ac.length ? ac[i++] : { done: true };
+    } };
+  if (global.Symbol) it[global.Symbol.iterator] = function () {
+    return it;
+  };
+  return it;
+};
+
+function Set() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+  a = a.filter(function (x, i) {
+    return i === a.indexOf(x);
+  });
+  a.size = a.length;
+  a.has = function (x) {
+    return a.indexOf(x) > -1;
+  };
+  a.add = function (x) {
+    if (!a.has(x)) {
+      a.size++;a.push(x);
+    }return a;
+  };
+  a.delete = function (x) {
+    var t = void 0;if (t = a.has(x)) {
+      a.size--;a.splice(a.indexOf(x), 1);
+    }return t;
+  };
+  a.clear = function () {
+    while (a.pop()) {}a.size = 0;
+  };
+  a.keys = a.values = function () {
+    return iter(a);
+  };
+  a.entries = function () {
+    return iter(a.map(function (x) {
+      return [x, x];
+    }));
+  };
+  if (global.Symbol) a[global.Symbol.iterator] = a.values;
+  return a;
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ })
 /******/ ]);

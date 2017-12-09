@@ -83,32 +83,9 @@ return /******/ (function(modules) { // webpackBootstrap
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-// A quick and dirty `Set` implementation.
-var Set = exports.Set = global.Set && new global.Set([1]).size === 1 ? global.Set : function Set() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+var Set = exports.Set = global.Set && new global.Set([1]).size === 1 ? global.Set : __webpack_require__(2);
 
-  a = a.filter(function (x, i) {
-    return i === a.indexOf(x);
-  });
-  a.size = a.length;
-  a.has = function (x) {
-    return a.indexOf(x) > -1;
-  };
-  a.add = function (x) {
-    if (!a.has(x)) {
-      a.size++;a.push(x);
-    }return a;
-  };
-  a.delete = function (x) {
-    var t = void 0;if (t = a.has(x)) {
-      a.size--;a.splice(a.indexOf(x), 1);
-    }return t;
-  };
-  a.clear = function () {
-    while (a.pop()) {}a.size = 0;
-  };
-  return a;
-};
+exports.default = Set;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
@@ -140,6 +117,43 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Set = Set;
+function Set() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+  a = a.filter(function (x, i) {
+    return i === a.indexOf(x);
+  });
+  a.size = a.length;
+  a.has = function (x) {
+    return a.indexOf(x) > -1;
+  };
+  a.add = function (x) {
+    if (!a.has(x)) {
+      a.size++;a.push(x);
+    }return a;
+  };
+  a.delete = function (x) {
+    var t = void 0;if (t = a.has(x)) {
+      a.size--;a.splice(a.indexOf(x), 1);
+    }return t;
+  };
+  a.clear = function () {
+    while (a.pop()) {}a.size = 0;
+  };
+  return a;
+}
 
 /***/ })
 /******/ ]);
