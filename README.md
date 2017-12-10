@@ -42,9 +42,9 @@ it.next().done   // => true
 ## CDN
 
 ```html
-<script src="https://unpkg.com/qd-set/umd/qd-set.min.js"></script>
+<script src="https://unpkg.com/qd-set/dist"></script>
 <!-- or -->
-<script src="https://unpkg.com/qd-set/umd/qd-set-with-iter.min.js"></script>
+<script src="https://unpkg.com/qd-set/dist/with-iter.js"></script>
 
 <script>
   var Set = qdSet.Set;
