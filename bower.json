@@ -1,7 +1,7 @@
 {
   "name": "qd-set",
   "description": "A tiny, quick and dirty Set implementation.",
-  "main": "umd/qd-set.js",
+  "main": "dist/index.js",
   "authors": [
     "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)"
   ],

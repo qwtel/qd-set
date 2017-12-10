@@ -2,19 +2,20 @@
   "name": "qd-set",
   "version": "1.0.0-pre.4",
   "description": "A tiny, quick and dirty Set implementation.",
-  "main": "index.js",
+  "main": "qd-set.js",
   "files": [
-    "index.js",
+    "qd-set.js",
     "with-iter.js",
     "src/",
-    "umd/"
+    "dist/"
   ],
   "scripts": {
+    "clean": "rm -rf dist",
     "test": "mocha --require babel-core/register",
     "build": "npm run build:prod & npm run build:dev & wait",
     "build:prod": "webpack --env prod",
     "build:dev": "webpack",
-    "prepare": "npm run test && npm run build",
+    "prepare": "npm run test && npm run clean && npm run build",
     "version": "npm run prepare && git add ."
   },
   "author": "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)",
