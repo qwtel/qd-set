@@ -75,7 +75,7 @@ const baseConfig = merge({
 
 const config = [
   merge(baseConfig, {
-    entry: resolve('./qd-set.js'),
+    entry: resolve('./index.js'),
     output: {
       filename: `index${min}.js`,
     },

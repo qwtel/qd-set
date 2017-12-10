@@ -2,9 +2,9 @@
   "name": "qd-set",
   "version": "1.0.0-pre.5",
   "description": "A tiny, quick and dirty Set implementation.",
-  "main": "qd-set.js",
+  "main": "index.js",
   "files": [
-    "qd-set.js",
+    "index0.js",
     "with-iter.js",
     "src/",
     "dist/"
