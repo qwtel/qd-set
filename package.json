@@ -3,7 +3,12 @@
   "version": "1.0.0-pre.3",
   "description": "A tiny, quick and dirty Set implementation.",
   "main": "index.js",
-  "browser": "dist/index.min.js",
+  "files": [
+    "index.js",
+    "with-iter.js",
+    "src/",
+    "umd/"
+  ],
   "scripts": {
     "test": "mocha --require babel-core/register",
     "build": "npm run build:prod & npm run build:dev & wait",
@@ -40,5 +45,10 @@
   "bugs": {
     "url": "https://github.com/qwtel/qd-set/issues"
   },
-  "homepage": "https://github.com/qwtel/qd-set#readme"
+  "homepage": "https://github.com/qwtel/qd-set#readme",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
 }
