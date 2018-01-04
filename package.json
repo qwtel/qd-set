@@ -1,6 +1,6 @@
 {
   "name": "qd-set",
-  "version": "1.0.0-pre.6",
+  "version": "1.0.0-pre.7",
   "description": "A tiny, quick and dirty Set implementation.",
   "main": "index.js",
   "files": [
