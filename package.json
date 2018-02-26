@@ -4,7 +4,7 @@
   "description": "A tiny, quick and dirty Set implementation.",
   "main": "index.js",
   "files": [
-    "index0.js",
+    "index.js",
     "with-iter.js",
     "src/",
     "dist/"
@@ -15,8 +15,7 @@
     "build": "npm run build:prod & npm run build:dev & wait",
     "build:prod": "webpack --env prod",
     "build:dev": "webpack",
-    "prepare": "npm run test && npm run clean && npm run build",
-    "version": "npm run prepare && git add ."
+    "prepare": "npm run test && npm run clean && npm run build"
   },
   "author": "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)",
   "license": "MIT",
