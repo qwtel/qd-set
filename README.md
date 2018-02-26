@@ -1,5 +1,7 @@
 # Quick and Dirty Set
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/qwtel/qd-set.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/qwtel/qd-set.svg?branch=master)](https://travis-ci.org/qwtel/qd-set)
 
 A tiny (10 LOC) [ES6 `Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) implementation.
