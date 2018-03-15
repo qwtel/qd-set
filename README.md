@@ -9,7 +9,7 @@ Think of it as a forwards-compatible [`_.uniq(array)`](http://underscorejs.org/#
 
 ## Usage
 ```js
-import { Set } from 'qd-set';
+import { Set } from 'qd-set/esm/index';
 
 const s = new Set([1, 2, 2, 3])
 s.size       // => 3
@@ -29,7 +29,7 @@ s.has(1)     // => false
 Need `keys`, `values`, `entries`?
 
 ```js
-import { Set } from 'qd-set/with-iter';
+import { Set } from 'qd-set/esm/with-iter';
 
 const s = new Set([1, 2, 2, 3])
 const it = s.values();
@@ -37,20 +37,6 @@ it.next().value  // => 1
 it.next().value  // => 2
 it.next().value  // => 3
 it.next().done   // => true
-```
-
-## CDN
-
-```html
-<script src="https://unpkg.com/qd-set/dist"></script>
-<!-- or -->
-<script src="https://unpkg.com/qd-set/dist/with-iter.js"></script>
-
-<script>
-  var Set = qdSet.Set;
-  var s = new Set([1, 2, 2, 3])
-  // ...
-</script>
 ```
 
 ## Source

@@ -1,4 +1,6 @@
-const { Set } = require('../src/qd-set-with-iter.js');
+global.Set = undefined;
+
+const { Set } = require('../es5/with-iter.js');
 const common = require('./common.js');
 
 const assert = require('assert');

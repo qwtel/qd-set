@@ -1,4 +1,6 @@
-const { Set } = require('../src/qd-set.js');
+global.Set = undefined;
+
+const { Set } = require('../es5/index.js');
 const common = require('./common.js');
 
 describe('Quick and Dirty Set', () => {

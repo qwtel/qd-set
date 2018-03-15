@@ -1,0 +1,10 @@
+{
+  "env": {
+    "es5": {
+      "presets": ["env"],
+    },
+    "esm": {
+      "presets": [["env", { "modules": false }]],
+    },
+  },
+}
