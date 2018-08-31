@@ -1,24 +1,22 @@
-global.Set = undefined;
-
-const { Set } = require('../es5/with-iter.js');
+const { Set: QDSet } = require('../es5/with-iter.js');
 const common = require('./common.js');
 
 const assert = require('assert');
 
 describe('Quick and Dirty Set with Iteration', () => {
-  common(Set);
+  common(QDSet);
 
   describe('keys', () => {
     it('should have a `keys` method', () => {
-      assert(new Set().keys);
+      assert(new QDSet().keys);
     });
 
     it('should return an iterator', () => {
-      assert(new Set().keys().next);
+      assert(new QDSet().keys().next);
     });
 
     it('should iterator over keys', () => {
-      const s = new Set([1, 2, 3]);
+      const s = new QDSet([1, 2, 3]);
       const it = s.keys();
       const i1 = it.next();
       assert.equal(i1.value, 1);
@@ -35,7 +33,7 @@ describe('Quick and Dirty Set with Iteration', () => {
     });
 
     it('should keep returning done:true', () => {
-      const s = new Set([1]);
+      const s = new QDSet([1]);
       const it = s.keys();
       assert.equal(it.next().value, 1);
       assert.equal(it.next().done, true);
@@ -46,15 +44,15 @@ describe('Quick and Dirty Set with Iteration', () => {
 
   describe('values', () => {
     it('should have a `values` method', () => {
-      assert(new Set().values);
+      assert(new QDSet().values);
     });
 
     it('should return an iterator', () => {
-      assert(new Set().values().next);
+      assert(new QDSet().values().next);
     });
 
     it('should iterator over values', () => {
-      const s = new Set([1, 2, 3]);
+      const s = new QDSet([1, 2, 3]);
       const it = s.values();
       const i1 = it.next();
       assert.equal(i1.value, 1);
@@ -71,7 +69,7 @@ describe('Quick and Dirty Set with Iteration', () => {
     });
 
     it('should keep returning done:true', () => {
-      const s = new Set([1]);
+      const s = new QDSet([1]);
       const it = s.values();
       assert.equal(it.next().value, 1);
       assert.equal(it.next().done, true);
@@ -82,15 +80,15 @@ describe('Quick and Dirty Set with Iteration', () => {
 
   describe('entries', () => {
     it('should have a `entries` method', () => {
-      assert(new Set().entries);
+      assert(new QDSet().entries);
     });
 
     it('should return an iterator', () => {
-      assert(new Set().entries().next);
+      assert(new QDSet().entries().next);
     });
 
     it('should iterator over entries', () => {
-      const s = new Set([1, 2, 3]);
+      const s = new QDSet([1, 2, 3]);
       const it = s.entries();
       const i1 = it.next();
       assert.deepEqual(i1.value, [1, 1]);
@@ -107,7 +105,7 @@ describe('Quick and Dirty Set with Iteration', () => {
     });
 
     it('should keep returning done:true', () => {
-      const s = new Set([1]);
+      const s = new QDSet([1]);
       const it = s.entries();
       assert.deepEqual(it.next().value, [1, 1]);
       assert.equal(it.next().done, true);

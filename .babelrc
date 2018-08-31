@@ -1,10 +1,10 @@
 {
   "env": {
     "es5": {
-      "presets": ["env"],
+      "presets": ["@babel/preset-env"],
     },
     "esm": {
-      "presets": [["env", { "modules": false }]],
+      "presets": [["@babel/preset-env", { "modules": false }]],
     },
   },
 }
